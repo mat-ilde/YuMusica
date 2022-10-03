@@ -27,7 +27,7 @@ export class SidebarComponent implements OnInit {
         router: ['/', 'history']
       },
       {
-        name: 'My library',
+        name: 'Your library',
         icon: 'uil uil-chart',
         router: ['/', 'favorites'],
         query: { hola: 'mundo' }
@@ -35,29 +35,29 @@ export class SidebarComponent implements OnInit {
     ]
     this.mainMenu.accessLink = [
       {
-        name: 'Create new list',
+        name: 'Create Playlist',
         icon: 'uil-plus-square'
       },
       {
-        name: 'My favorites',
+        name: 'Liked Songs',
         icon: 'uil-heart-medical'
       }
     ]
     this.customOptions = [
       {
-        name: 'Mi lista º1',
+        name: 'My list º1',
         router: ['/']
       },
       {
-        name: 'Mi lista º2',
+        name: 'My list º2',
         router: ['/']
       },
       {
-        name: 'Mi lista º3',
+        name: 'My list º3',
         router: ['/']
       },
       {
-        name: 'Mi lista º4',
+        name: 'My list º4',
         router: ['/']
       }
     ]
