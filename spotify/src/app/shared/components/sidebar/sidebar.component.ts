@@ -6,10 +6,62 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  mainMenu: {
+    defaultOptions: Array<any>, accessLink: Array<any>
+  } = { defaultOptions: [], accessLink: [] }
+  customOptions: Array<any> = []
 
-  constructor() { }
+
+  constructor(/*private router: Router*/) { }
 
   ngOnInit(): void {
+    this.mainMenu.defaultOptions = [
+      {
+        name: 'Home',
+        icon: 'uil uil-estate',
+        router: ['/', 'auth']
+      },
+      {
+        name: 'Search',
+        icon: 'uil uil-search',
+        router: ['/', 'history']
+      },
+      {
+        name: 'My library',
+        icon: 'uil uil-chart',
+        router: ['/', 'favorites'],
+        query: { hola: 'mundo' }
+      }
+    ]
+    this.mainMenu.accessLink = [
+      {
+        name: 'Create new list',
+        icon: 'uil-plus-square'
+      },
+      {
+        name: 'My favorites',
+        icon: 'uil-heart-medical'
+      }
+    ]
+    this.customOptions = [
+      {
+        name: 'Mi lista º1',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º2',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º3',
+        router: ['/']
+      },
+      {
+        name: 'Mi lista º4',
+        router: ['/']
+      }
+    ]
+
   }
 
 }
