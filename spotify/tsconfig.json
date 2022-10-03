@@ -20,6 +20,23 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    //to help to create a clean code while we are importing paths.
+    "paths": 
+    {
+      "@core/*":[
+        "src/app/core/*"
+      ],
+      
+      "@modules/*":[
+        "src/app/modules/*"
+      ],
+      
+      "@shared/*":[
+        "src/app/shared/*"
+      ],
+
+    },
+   
     "lib": [
       "es2020",
       "dom"
