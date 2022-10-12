@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrackModel } from '@core/models/tracks.model';
 
 @Component({
   selector: 'app-mediaplayer',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mediaplayer.component.css']
 })
 export class MediaplayerComponent implements OnInit {
-  mockOver: any={
-    cover:'https://imagen.research.google/main_gallery_images/the-toronto-skyline-with-google-brain-logo.jpg',
-    album:'album',
-    name: 'canción'
+  //tiene que cumplir con el modelo de la interfaz TrackModel
+  mockOver: TrackModel={
+    cover:'https://jenesaispop.com/wp-content/uploads/2009/09/guetta_onelove.jpg',
+    album:'One Love',
+    name: '"Getting Over"',
+    _id:1,
+    url:'http://localhost:3000/track.mp3' 
 
   }
 
