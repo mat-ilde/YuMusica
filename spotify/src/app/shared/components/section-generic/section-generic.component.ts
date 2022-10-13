@@ -8,7 +8,7 @@ import { TrackModel } from '@core/models/tracks.model';
 })
 export class SectionGenericComponent implements OnInit {
   // @Input() and @Output() give a child component 
-  // a way to communicate with its parent component
+  // a way to communicate with parent component
   @Input()title:string=''
   @Input()mode:'small' | 'big'= 'big'
   @Input()dataTracks:Array<TrackModel>=[]
