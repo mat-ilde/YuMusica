@@ -5,16 +5,18 @@ import { HomeModule } from './modules/home/home.module';
 
 const routes: Routes = [
   {
-    path: 'auth',
-    //lazy loading 
-    loadChildren: ()=> import(`../app/modules/auth/auth.module`).then(m=>m.AuthModule)
-  },
-  {
     path: '',
     component:HomepageComponent,
     //lazy loading 
     loadChildren: ()=> import(`../app/modules/home/home.module`).then(m=>m.HomeModule)
+  },
+  
+  {
+    path: 'auth',
+    //lazy loading 
+    loadChildren: ()=> import(`../app/modules/auth/auth.module`).then(m=>m.AuthModule)
   }
+ 
 ];
 
 @NgModule({

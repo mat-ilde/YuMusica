@@ -18,6 +18,7 @@ const routes: Routes = [{
   loadChildren: ()=> import(`@modules/history/history.module`).then(m=>m.HistoryModule)
 
 }
+
 ];
 
 @NgModule({
